@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const FooterElement = styled.footer`
   background-color: #f0f0f0;
   padding: 2vw;
+  vertical-align: bottom;
   
   & p{
     font-size: 0.8vw;    

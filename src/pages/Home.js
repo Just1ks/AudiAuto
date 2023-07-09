@@ -1,9 +1,8 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Description from "./components/Description";
-import CarElement from "./components/CarElement";
-import CarsCatalog from "./components/CarsCatalog";
-import {cars} from "./cars.data";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Description from "../components/Description";
+import CarElement from "../components/CarElement";
+import CarsCatalog from "../components/CarsCatalog";
 import { styled } from "styled-components";
 
 function Home() {
