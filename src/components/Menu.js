@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const MenuElement = styled.nav`
   color: black;
@@ -25,8 +26,7 @@ export default function Menu() {
   return (
     <MenuElement>
         <ul>
-          <li>О салоне</li>
-          <li>audiCars account</li>
+          <li><Link to='/profile'>audiCars account</Link></li>
         </ul>
     </MenuElement>
   )
