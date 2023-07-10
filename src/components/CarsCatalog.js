@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from "styled-components";
 import CarElement from './CarElement';
+import ModelsCatalog from './ModelsCatalog';
 import {cars} from "../cars.data";
 
 const Container = styled.div`
@@ -16,14 +17,26 @@ const Cars = styled.div`
 `
 
 export default function CarsCatalog() {
-  return (
+
+    const [selectedCar, setSelectedCar] = useState(null);
+    const handleSelectCar = (car) => {
+      setSelectedCar(car);
+    };
+
+    return (
     <Container>
         <h2>Модельный ряд</h2>
         <Cars>
             {cars.map (car => (
-                <CarElement carId={car.id} name={car.name} image={car.image}/>
+                <CarElement
+                    car={car}
+                    isSelected={selectedCar && selectedCar.id === car.id}
+                    onSelectCar={handleSelectCar}/>
             ))}
         </Cars>
+        {selectedCar && (
+            <ModelsCatalog models={selectedCar.models} />
+        )}
     </Container>
    
   )

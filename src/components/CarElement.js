@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ModelElement from './ModelElement';
 import styled from 'styled-components';
 
 const CarContainer = styled.div`
@@ -18,13 +19,28 @@ const CarContainer = styled.div`
     cursor: pointer;
     text-decoration: underline;
   }
+
+  ${({isSelected}) => 
+    isSelected &&
+    `
+    text-decoration: underline;
+    font-weight:700;
+    `
+  }
 `
 
-export default function CarElement({carId, name, image}) {
+export default function CarElement({car, isSelected, onSelectCar}) {
+
+  const handleClick = () => {
+    if (onSelectCar) {
+      onSelectCar(car);
+    }
+  };
+
   return (
-    <CarContainer key={carId}>
-      <img src={image} alt={carId}/>
-      <p>{name}</p>
+    <CarContainer isSelected={isSelected} onClick={handleClick} key={car.carId}>
+      <img src={isSelected ? car.selectImage : car.image} alt={car.carId}/>
+      <p>{car.name}</p>
     </CarContainer>
   )
 }

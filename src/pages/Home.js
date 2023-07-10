@@ -4,6 +4,7 @@ import Description from "../components/Description";
 import CarElement from "../components/CarElement";
 import CarsCatalog from "../components/CarsCatalog";
 import { styled } from "styled-components";
+import ModelsCatalog from "../components/ModelsCatalog";
 
 function Home() {
   return (
@@ -11,7 +12,8 @@ function Home() {
       <Header />
       <div className="main">
         <Description/>
-        <CarsCatalog/>       
+        <CarsCatalog/>    
+        <ModelsCatalog/>
       </div>      
       <Footer />
     </div>
