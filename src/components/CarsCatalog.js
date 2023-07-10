@@ -5,6 +5,7 @@ import ModelsCatalog from './ModelsCatalog';
 import {cars} from "../cars.data";
 
 const Container = styled.div`
+    display: inline-block;
     text-align: center;
     margin: 2vw;
 `
