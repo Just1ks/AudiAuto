@@ -20,8 +20,12 @@ const Cars = styled.div`
 export default function CarsCatalog() {
 
     const [selectedCar, setSelectedCar] = useState(null);
+    
     const handleSelectCar = (car) => {
       setSelectedCar(car);
+    };
+    const handleCloseCatalog = () => {
+        setSelectedCar(null);
     };
 
     return (
@@ -36,7 +40,7 @@ export default function CarsCatalog() {
             ))}
         </Cars>
         {selectedCar && (
-            <ModelsCatalog models={selectedCar.models} />
+            <ModelsCatalog models={selectedCar.models} onClose={handleCloseCatalog}/>
         )}
     </Container>
    
