@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import { styled } from "styled-components";
 import ModelElement from './ModelElement';
-import {cars} from "../cars.data";
+import closeIcon from '../images/close-icon.png';
 
 const Container = styled.div`
     display: inline-block;
     text-align: center;
-    margin: 2vw;
+    margin: 4vw;
     
     & span:hover{
         cursor: pointer;
-        text-decoration: underline;
     }
 `
 
@@ -35,7 +34,9 @@ export default function ModelsCatalog({models, onClose}) {
     return (
     <Container>
         <h2>Модели автомобиля</h2>
-        <span onClick={handleClose}>Закрыть</span>
+        <span onClick={handleClose} >
+            <img src={closeIcon}/>
+        </span>       
         <Cars>
             {models.map(model => (
                 <ModelElement model={model}/>
