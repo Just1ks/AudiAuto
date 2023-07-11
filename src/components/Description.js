@@ -1,7 +1,7 @@
 import React from 'react'
-import videoAudi from '../videos/banner.mp4'
-import styled from 'styled-components'
-import Button from './Button'
+import videoAudi from '../videos/banner.mp4';
+import styled from 'styled-components';
+import Button from './Button';
 
 const DescriptionContainer = styled.div`
   position:relative;
@@ -45,7 +45,7 @@ const contrastElement = {
 export default function Description() {
   return (
     <DescriptionContainer>
-        <video autoPlay src={videoAudi}/>
+        <video autoPlay muted src={videoAudi}/>
         <div style={contrastElement}></div>
         <DescriptionText>
             <p>Продвижение через технологии</p>
