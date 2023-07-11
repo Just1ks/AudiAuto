@@ -8,10 +8,6 @@ const Container = styled.div`
     text-align: center;
     margin: 4vw;
     
-    & span{
-        width:3vw;
-    }
-
     & span:hover{
         cursor: pointer;
     }

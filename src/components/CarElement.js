@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import ModelElement from './ModelElement';
 import styled from 'styled-components';
 
 const CarContainer = styled.div`

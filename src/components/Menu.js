@@ -19,6 +19,11 @@ const MenuElement = styled.nav`
       cursor: pointer;      
       text-decoration: underline;
     }
+
+    & a{
+      color: black;
+      text-decoration: none;
+    }
   }
 `
 

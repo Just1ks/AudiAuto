@@ -29,7 +29,7 @@ const ModelContainer = styled.div`
 export default function ModelElement({model}) {
   return (
     <ModelContainer key={model.modelId}>
-      <Link to='/car'>
+      <Link to={`/car/${model.name}/${model.id}`}>
         <img src={model.image} alt={model.modelId}/>
         <p>{model.name}</p>
       </Link>      

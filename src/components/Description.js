@@ -1,12 +1,12 @@
 import React from 'react'
-import imageAudi from '../images/A8-main.jpg'
+import videoAudi from '../videos/banner.mp4'
 import styled from 'styled-components'
 import Button from './Button'
 
 const DescriptionContainer = styled.div`
   position:relative;
 
-  & img{
+  & video{
     width: 100%;
     height: auto;
   }  
@@ -45,7 +45,7 @@ const contrastElement = {
 export default function Description() {
   return (
     <DescriptionContainer>
-        <img src={imageAudi} alt='Ауди А8'/>
+        <video autoPlay src={videoAudi}/>
         <div style={contrastElement}></div>
         <DescriptionText>
             <p>Продвижение через технологии</p>
