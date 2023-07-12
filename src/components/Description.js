@@ -2,6 +2,7 @@ import React from 'react'
 import videoAudi from '../videos/banner.mp4';
 import styled from 'styled-components';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const DescriptionContainer = styled.div`
   position:relative;
@@ -42,6 +43,8 @@ const contrastElement = {
   backgroundColor: 'rgba(0, 0, 0, 0.3)'
 };
 
+
+
 export default function Description() {
   return (
     <DescriptionContainer>
@@ -50,7 +53,9 @@ export default function Description() {
         <DescriptionText>
             <p>Продвижение через технологии</p>
             <p style={descriptionStyle}>пр. Независимости 198, Минск</p>
-            <Button Text={'Тест-драйв'}/>
+            <Link to='/test-drive'>
+              <Button Text={'Тест-драйв'}/>
+            </Link>          
         </DescriptionText>
     </DescriptionContainer>
   )
