@@ -11,12 +11,18 @@ const Container = styled.div`
     & span:hover{
         cursor: pointer;
     }
+    
 `
 
 const Cars = styled.div`
     display: flex;
     flex-direction: row;        
     flex-wrap: wrap;
+`
+
+const Icon = styled.img`
+    width: 2.5vw;
+    margin-top:1.1vw;
 `
 
 export default function ModelsCatalog({models, onClose}) {
@@ -35,7 +41,7 @@ export default function ModelsCatalog({models, onClose}) {
     <Container>
         <h2>Модели автомобиля</h2>
         <span onClick={handleClose} >
-            <img src={closeIcon}/>
+            <Icon src={closeIcon}/>
         </span>       
         <Cars>
             {models.map(model => (
